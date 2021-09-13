@@ -1,4 +1,3 @@
-//@ts-check
 import { observer } from "mobx-react-lite";
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";

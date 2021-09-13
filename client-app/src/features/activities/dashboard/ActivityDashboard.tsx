@@ -7,16 +7,17 @@ import ActivityFilters from "./Activityfilters";
 import ActivityList from "./ActivityList";
 
 export default observer(function ActivityDashboard() {
-    const {activityStore} = useStore();
-    const {loadActivities, activityRegistry} = activityStore;
-    
+    const { activityStore } = useStore();
+    const { loadActivities, activityRegistry } = activityStore;
+
     useEffect(() => {
-        if(activityRegistry.size <= 1) loadActivities();
+        if (activityRegistry.size <= 1) loadActivities();
     }, [activityRegistry.size, loadActivities])
-  
+
     if (activityStore.loadingnIntial) return <LoadingComponents content='Loading App' />
-    
-    return(
+
+    return (
+        //<Test></Test>
         <Grid>
             <Grid.Column width='10'>
                 <ActivityList />
